@@ -4,7 +4,9 @@ class Node:
         self.data = data
         self.next = None
 
-    
+'''A singly linked list can be created using a simple class to hold the list. We start with a constructor 
+that holds a reference to the very first node in the list (that is head in the following code). Since 
+this list is initially empty, we will start by setting this reference to None:'''
 class SinglyLinkedList:
     def __init__ (self):
         self.head = None
