@@ -1,4 +1,8 @@
-
+# Greedy algorithms
+'''Greedy algorithms often involve optimization and combinatorial problems. In greedy algorithms, 
+the objective is to obtain the optimum solution from many possible solutions in each step. We 
+try to get the local optimum solution, which may eventually lead us to obtain the global optimum solution. The greedy strategy does not always produce the optimal solution. However, the 
+sequence of locally optimal solutions generally approximates the globally optimal solution'''
 def get_shortest_distance(table, vertex): 
         shortest_distance = table[vertex][DISTANCE] 
         return shortest_distance 
