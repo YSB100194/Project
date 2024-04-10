@@ -23,12 +23,12 @@ class SinglyLinkedList:
     def delete_first_node (self): 
         current = self.head  
         if self.head is None:
-            print("No data element to delete")
+            print("No data element to delete") # we initially check if there is no item to delete from the list, and we print the appropriate message
         elif current == self.head:
             self.head = current.next
             
           
-    def delete_last_node (self): 
+    def delete_last_node (self): #Deleting the node at the end in the singly linked list
         current = self.head 
         prev = self.head
         while current:
@@ -39,7 +39,7 @@ class SinglyLinkedList:
             current = current.next
             
 
-    def delete(self, data): 
+    def delete(self, data):  #Deleting any intermediate node in a singly linked list
         current = self.head 
         prev = self.head 
         while current:
@@ -77,10 +77,21 @@ while current:
     
     
     
-words.delete('ham')
+words.delete('ham')  
 current = words.head
 while current:
     print(current.data)
-    current = current.next
-    
+    current = current.next  
+'''The worst-case time complexity of the delete operation is O(n) since we have to traverse the 
+list to reach the desired position and, in the worst-case scenario, we may have to traverse all the 
+n nodes in the list'''
+
+
+# Clearing a list
+'''We may need to clear a list quickly, and there is a very simple way to do this. We can clear a list 
+by simply clearing the pointer head and tail by setting them to None:'''
+def clear(self):
+ # clear the entire list.
+ self.tail = None
+ self.head = None
     

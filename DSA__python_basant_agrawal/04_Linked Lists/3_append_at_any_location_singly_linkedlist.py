@@ -1,3 +1,7 @@
+'''When we want to insert a node in between two existing nodes, all we have to do is update two 
+links. The previous node points to the new node, and the new node should point to the successor 
+of the previous node'''
+
 class Node:
     """ A singly-linked node. """
     def __init__(self, data=None):
@@ -59,12 +63,15 @@ while current:
     
     
     
-words.append_at_a_location('new', 2)
+words.append_at_a_location('new', 2) # need to check 
 
 current = words.head
 while current:
     print(current.data)
     current = current.next
     
-    
+'''The worst-case time complexity of the insert operation is O(1) when we have an additional 
+pointer that points to the last node. Otherwise, when we do not have the link to the last node, 
+the time complexity will be O(n) since we have to traverse the list to reach the desired position 
+and in the worst case, we may have to traverse all the n nodes in the list.'''
 
